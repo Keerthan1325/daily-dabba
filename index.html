@@ -86,13 +86,27 @@
     /* testimonials */
     .testi{background:var(--light)}
     .quote{font-style:italic}
+    /* redesigned logo animation */
+.logo-anim{
+  display:inline-block;
+  animation: logoPop 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes logoPop{
+  0%   { transform: scale(1) translateY(0); }
+  40%  { transform: scale(1.06) translateY(-10px); }
+  70%  { transform: scale(0.98) translateY(2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <div class="brand">
-        <img src="daily-dabba-logo.png" alt="Daily Dabba logo" style="width:130px;height:130px;border-radius:12px;object-fit:contain" />
+        <img src="daily-dabba-logo.png" alt="Daily Dabba logo" style="width:200px;height:200px;border-radius:12px;object-fit:contain" />
         <div>
           <div>Daily Dabba</div>
           <small class="muted">Homemade meals • Delivered fresh</small>
@@ -214,7 +228,7 @@
         <div>
           <img src="daily-dabba-logo.png"
                alt="Daily Dabba logo"
-               style="width:130px;height:130px;object-fit:contain;border-radius:12px;margin-bottom:8px" />
+               style="width:200px;height:200px;object-fit:contain;border-radius:12px;margin-bottom:8px" />
               <h4>Daily Dabba</h4>
           <p class="muted">Homemade meals • Delivered fresh</p>
           <p><strong>City:</strong> Davangere</p>
