@@ -44,6 +44,10 @@
     .btn.primary{background:var(--green); color:#fff}
     .btn.secondary{background:#fff; color:var(--green); border-color:#cfe7d1}
 
+    /* simple navigation */
+    .nav{display:flex; gap:14px; flex-wrap:wrap; margin-top:10px}
+    .nav a{text-decoration:none; font-weight:700; color:var(--green); padding:6px 10px; border-radius:8px; background:#e8f5e9}
+
     section{padding:28px 0}
     .cards{display:grid; gap:14px}
     @media(min-width:720px){ .cards{grid-template-columns:repeat(3,1fr)} }
@@ -62,18 +66,44 @@
       position:fixed; right:16px; bottom:16px; background:#25D366; color:#fff; padding:12px 14px; border-radius:999px; font-weight:800; text-decoration:none;
       box-shadow:0 8px 20px rgba(0,0,0,.15)
     }
+
+    /* subtle interactions */
+    .card{transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card:hover{transform:translateY(-3px); box-shadow:0 10px 22px rgba(0,0,0,.08); border-color:#cfe7d1}
+    /* for mobile/touch */
+    .card:active{transform:scale(0.98); box-shadow:0 6px 14px rgba(0,0,0,.12)}
+
+    /* highlight strip */
+    .highlights{background:linear-gradient(135deg,#f1faf2,#ffffff); border-top:1px solid #e6efe7; border-bottom:1px solid #e6efe7}
+    .hi-grid{display:grid; gap:12px}
+    @media(min-width:720px){ .hi-grid{grid-template-columns:repeat(3,1fr)} }
+    .hi{display:flex; gap:10px; align-items:center; padding:14px; border-radius:14px; background:#fff; border:1px solid #e6efe7}
+    .hi b{color:var(--green)}
+
+    /* section title accent */
+    .accent{display:inline-block; padding:4px 10px; border-radius:999px; background:#e8f5e9; color:var(--green); font-weight:700}
+
+    /* testimonials */
+    .testi{background:var(--light)}
+    .quote{font-style:italic}
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <div class="brand">
-        <img src="daily-dabba-logo.png" alt="Daily Dabba logo" style="width:112px;height:112px;border-radius:12px;object-fit:contain" />
+        <img src="daily-dabba-logo.png" alt="Daily Dabba logo" style="width:130px;height:130px;border-radius:12px;object-fit:contain" />
         <div>
           <div>Daily Dabba</div>
           <small class="muted">Homemade meals • Delivered fresh</small>
         </div>
       </div>
+
+      <nav class="nav">
+        <a href="#plans">Plans</a>
+        <a href="#timing">Delivery</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
       <div class="hero">
         <div>
@@ -97,6 +127,26 @@
       </div>
     </div>
   </header>
+
+  <!-- Highlights strip -->
+  <section class="highlights">
+    <div class="container">
+      <div class="hi-grid">
+        <div class="hi">
+          <b>Home‑style</b>
+          <span class="muted">Low oil, simple spices</span>
+        </div>
+        <div class="hi">
+          <b>On‑time</b>
+          <span class="muted">Fixed lunch & dinner slots</span>
+        </div>
+        <div class="hi">
+          <b>Local</b>
+          <span class="muted">Davangere nearby areas only</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="plans">
     <div class="container">
@@ -137,8 +187,8 @@
     </div>
   </section>
 
-  <section>
-    <div class="container">
+    <section id="timing">
+     <div class="container">
       <div class="cards">
         <div class="card">
           <h3>Delivery timing</h3>
@@ -164,7 +214,7 @@
         <div>
           <img src="daily-dabba-logo.png"
                alt="Daily Dabba logo"
-               style="width:112px;height:112px;object-fit:contain;border-radius:12px;margin-bottom:8px" />
+               style="width:130px;height:130px;object-fit:contain;border-radius:12px;margin-bottom:8px" />
 
           <h3>Daily Dabba</h3>
           <p class="muted">Homemade meals • Delivered fresh</p>
